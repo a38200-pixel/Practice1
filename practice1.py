@@ -79,3 +79,16 @@ if 1 < A < 10:
 
 print("끝")
 #3일차 수업 끝
+#3일차 정처기 Class, self
+class ClassicCar:
+    color = "빨간색"
+
+    def test(self):
+        color = "파란색"
+        print("color = ", color)
+        print("self.color = ", self.color)
+
+father = ClassicCar()
+father.test()
+father.color = "검은색"
+father.test()
