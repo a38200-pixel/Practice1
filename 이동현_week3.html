@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>면접 지원서</title>
+    <style>
+        #container { width: 700px; margin: 10px auto; }
+        h1 { text-align: center;}
+        
+        /* 테이블 스타일 */
+        table { width: 100%; border-collapse: collapse;}
+        th, td { border: 1px solid #ccc;}
+        th {text-align: center; width: 150px;}
+       
+        /* 필드셋 스타일 */
+        fieldset { border: none; padding: 0; margin: 0; }
+        legend {display: none;}
+
+        /* 입력 요소 스타일 */
+        input[type="text"], input[type="tel"], input[type="password"], select {width: 95%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;}
+        .button-area { text-align: center;}
+        button { padding: 10px 20px; margin: 5px;}
+    </style>
+</head>
+<body>
+
+<div id="container">
+    <h1><b>면접 지원서</b></h1>
+    <hr>
+
+    <form action="#" method="post">
+        <fieldset>
+            <legend>지원자 정보</legend>
+            
+            <table>
+                <tr>
+                    <th rowspan="5">개인정보</th>
+                    <th><label for="u_name">이름</label></th>
+                    <td>
+                        <input type="text" id="u_name" name="u_name" 
+                               placeholder="성함을 입력하세요" required autofocus>
+                    </td>
+                </tr>
+                <tr>
+                    <th><label for="u_major">학과/학번</label></th>
+                    <td>
+                        <input type="text" id="u_major" name="u_major" 
+                               placeholder="예: AI소프트웨어학과 / 2601340027" required>
+                    </td>
+                </tr>
+                <tr>
+                    <th><label for="u_tel">연락처</label></th>
+                    <td>
+                        <input type="tel" id="u_tel" name="u_tel" 
+                               placeholder="010-0000-0000" required>
+                    </td>
+                </tr>
+                <tr>
+                    <th><label for="u_email">이메일</label></th>
+                    <td colspan="2">
+                        <input type="text" id="u_email" name="u_email" 
+                               placeholder="example@email.com" required>
+                    </td>
+                </tr>
+                <tr>
+                    <th><label for="u_address">주소</label></th>
+                    <td colspan="2">
+                        <input type="text" id="u_address" name="u_address" 
+                               placeholder="주소를 입력하세요" required>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <th>지원 분야</th>
+                    <td colspan="2">
+                        <input type="radio" name="field" id="secretary" value="secretary" checked>
+                        <label for="secretary">비서</label>
+                        &nbsp;
+                        <input type="radio" name="field" id="tech" value="tech">
+                        <label for="tech">기술영업</label>
+                        &nbsp;
+                        <input type="radio" name="field" id="marketing" value="marketing">
+                        <label for="marketing">마케팅</label>
+                        &nbsp;
+                        <input type="radio" name="field" id="it" value="it">
+                        <label for="it">IT</label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th>기타</th>
+                    <td colspan="2">
+                        <label for="u_pw">비밀번호: </label>
+                        <input type="password" id="u_pw" name="u_pw" style="width:100px;" placeholder="4자리" required>
+                        &nbsp;
+                        <label for="interview_date">면접 가능일: </label>
+                        <input type="date" id="interview_date" name="interview_date">
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+        <br>
+        <div class="button-area">
+            <button type="submit">지원서 제출하기</button>
+            <button type="reset" onclick="history.back();">돌아가기</button>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>
